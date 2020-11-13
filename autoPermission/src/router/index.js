@@ -31,7 +31,6 @@ router.beforeEach(async (to, from, next) => {
     const newRoutes = generateRouter(store.state.userRouters)
     router.addRoutes(newRoutes)
     router.options.routes = router.options.routes.concat(newRoutes)
-    // next({path: to.path})
     console.log(router.options.routes)
     next()
   } else {
